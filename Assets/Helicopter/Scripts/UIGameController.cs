@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class UIGameController : MonoBehaviour
 {
@@ -8,24 +10,28 @@ public class UIGameController : MonoBehaviour
     public GameObject RestartButton;
     public GameObject InfoButton;
     public GameObject InfoPanel;
+    Camera camera;
 
-	// Use this for initialization
+    // Use this for initialization
     public static UIGameController runtime;
 
     private void Awake()
     {
         runtime = this;
+        camera = Camera.main;
     }
 
-    void Start ()
-	{
-	    ShowInfo();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void Start()
+    {
+        ShowInfo();
+        camera.GetComponent<CinemachineBrain>().enabled = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     private void ShowInfoPanel(bool isShow)
     {
@@ -38,14 +44,16 @@ public class UIGameController : MonoBehaviour
     public void ShowInfo()
     {
         ShowInfoPanel(true);
+        camera.GetComponent<CinemachineBrain>().enabled = false;
     }
     public void HideInfo()
     {
         ShowInfoPanel(false);
+        camera.GetComponent<CinemachineBrain>().enabled = true;
     }
 
     public void RestartGame()
     {
-        Application.LoadLevel("Main");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
