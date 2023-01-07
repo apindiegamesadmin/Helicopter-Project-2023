@@ -998,7 +998,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9030403041731503574}
-  m_LocalRotation: {x: -0.017635468, y: 0, z: 0, w: 0.9998445}
+  m_LocalRotation: {x: -0.01763556, y: 0, z: 0, w: 0.9998445}
   m_LocalPosition: {x: 53.61, y: -1.31, z: -3.026}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
@@ -1014,7 +1014,7 @@ Transform:
   - {fileID: 1041319626364644703}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -2.021, y: 0, z: 0}
 --- !u!54 &1041319626028104920
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1048,11 +1048,11 @@ MonoBehaviour:
   HelicopterModel: {fileID: 1041319626028104920}
   primaryRotorController: {fileID: 1041319625839591649}
   secondaryRotorController: {fileID: 1041319625839591648}
-  TurnForce: 6
-  ForwardForce: 20
+  TurnForce: 10
+  ForwardForce: 10
   ForwardTiltForce: 15
-  TurnTiltForce: 60
-  EffectiveHeight: 50
-  turnTiltForcePercent: 10
-  turnForcePercent: 20
+  TurnTiltForce: 40
+  EffectiveHeight: 120
+  turnTiltForcePercent: 15
+  turnForcePercent: 15
   IsOnGround: 1
