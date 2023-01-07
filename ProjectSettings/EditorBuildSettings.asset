@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FreeRide.unity
+    guid: 21c22d07d5089a54bae0d9c4c5a70573
   m_configObjects: {}
