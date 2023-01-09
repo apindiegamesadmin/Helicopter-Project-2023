@@ -1231,6 +1231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 856572107}
+  - component: {fileID: 856572108}
   m_Layer: 0
   m_Name: MachineGun
   m_TagString: Untagged
@@ -1254,6 +1255,24 @@ Transform:
   m_Father: {fileID: 1610958409}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &856572108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856572106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25d37c4cc7258d459b0e031cd905d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muzzle: {fileID: 2125098693}
+  bulletPrefab: {fileID: 0}
+  point: {fileID: 528000812}
+  firePower: 100
+  range: 100
+  fireRate: 0
 --- !u!1 &866024714
 GameObject:
   m_ObjectHideFlags: 3
@@ -2908,6 +2927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WFX_MF 4P RIFLE1
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: c888f0c922d622147bbdbe2ca794142b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: c888f0c922d622147bbdbe2ca794142b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2981,5 +3004,10 @@ PrefabInstance:
 --- !u!4 &2083668064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: c888f0c922d622147bbdbe2ca794142b, type: 3}
+  m_PrefabInstance: {fileID: 2083668063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2125098693 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800006, guid: c888f0c922d622147bbdbe2ca794142b, type: 3}
   m_PrefabInstance: {fileID: 2083668063}
   m_PrefabAsset: {fileID: 0}
