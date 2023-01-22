@@ -11,14 +11,14 @@ public class MousePosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        x = Input.GetAxis("Mouse Y");
-        rotate = new Vector3(x * sensitivity, 0);
-        transform.eulerAngles = transform.eulerAngles - rotate;
+        // x = Input.GetAxis("Mouse Y");
+        // rotate = new Vector3(x * sensitivity, 0);
+        // transform.eulerAngles = transform.eulerAngles - rotate;
     }
 }
