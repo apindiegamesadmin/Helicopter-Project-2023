@@ -8,6 +8,8 @@ public class HydraMissile : MonoBehaviour
     public Rigidbody _rigidbody;
     private Transform firePoint;
     public ParticleSystem fireball;
+    public const string ENEMY = "Enemy";
+    private float timer = 5f;
 
     private void Awake()
     {
@@ -17,23 +19,29 @@ public class HydraMissile : MonoBehaviour
 
     void Start()
     {
-
+        _rigidbody.position += firePoint.forward * travelspeed * Time.deltaTime;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        _rigidbody.position += firePoint.forward * travelspeed * Time.deltaTime;
-        fireball.transform.position = _rigidbody.position + new Vector3(0, 0, -2.3f);
-        float timer = 5f;
-        if (timer > 0)
+        _rigidbody.position += transform.forward * travelspeed * Time.deltaTime;
+        fireball.transform.position = _rigidbody.position + new Vector3(0, 0, -2f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == ENEMY)
         {
-            timer -= Time.deltaTime;
+            // Play explosion effect and sound
+
+            // Take damage
+            Damage damage = collision.transform.GetComponent<Damage>();
+            damage.TakeDamage(20);
         }
-        else
+        else if (collision.transform.tag == "Ground")
         {
-            Destroy(this.gameObject);
-            Destroy(fireball);
+            Debug.Log("Damage to " + collision.transform.name);
         }
     }
 }

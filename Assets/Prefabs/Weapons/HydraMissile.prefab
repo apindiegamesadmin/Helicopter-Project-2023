@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3915515637341656795}
   m_Layer: 0
   m_Name: HydraMissile
-  m_TagString: Untagged
+  m_TagString: HydraMissile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d9ee4654108924f9b45eaee117b939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  travelspeed: 100
+  travelspeed: 150
   _rigidbody: {fileID: 6019240465986452017}
   fireball: {fileID: 694246493194207024}
 --- !u!1001 &2034938795373500764
@@ -154,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2510372824896426177, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.3
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 2510372824896426177, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       propertyPath: m_LocalRotation.w

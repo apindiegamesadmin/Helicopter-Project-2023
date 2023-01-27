@@ -10,6 +10,7 @@ public class UIGameController : MonoBehaviour
     public GameObject RestartButton;
     public GameObject InfoButton;
     public GameObject InfoPanel;
+    public GameObject spot;
     Camera camera;
 
     // Use this for initialization
@@ -25,6 +26,7 @@ public class UIGameController : MonoBehaviour
     {
         ShowInfo();
         camera.GetComponent<CinemachineBrain>().enabled = false;
+        spot.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class UIGameController : MonoBehaviour
         RestartButton.SetActive(!isShow);
         InfoButton.SetActive(!isShow);
         InfoPanel.SetActive(isShow);
+        spot.SetActive(!isShow);
     }
 
     public void ShowInfo()
