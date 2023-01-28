@@ -6,6 +6,7 @@ TagManager:
   tags:
   - HydraMissile
   - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX

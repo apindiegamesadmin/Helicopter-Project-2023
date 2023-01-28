@@ -29,19 +29,21 @@ public class HydraMissile : MonoBehaviour
         fireball.transform.position = _rigidbody.position + new Vector3(0, 0, -2f);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void onCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == ENEMY)
-        {
-            // Play explosion effect and sound
+        // if (collision.collider.name == ENEMY)
+        // {
+        //     // Play explosion effect and sound
 
-            // Take damage
-            Damage damage = collision.transform.GetComponent<Damage>();
-            damage.TakeDamage(20);
-        }
-        else if (collision.transform.tag == "Ground")
-        {
-            Debug.Log("Damage to " + collision.transform.name);
-        }
+        //     // Take damage
+        //     Damage damage = collision.transform.GetComponent<Damage>();
+        //     damage.TakeDamage(20);
+        // }
+        // else if (collision.transform.tag == "Ground")
+        // {
+        //     Debug.Log("Damage to " + collision.transform.name);
+        // }
+
+        Debug.Log("pass!");
     }
 }
