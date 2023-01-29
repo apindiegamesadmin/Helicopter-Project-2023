@@ -6,8 +6,8 @@ public class Hydra : MonoBehaviour
 {
     public Transform MissilePrefab;
     public Transform SpawnPoint;
-    public float fireDelta = 3F;
-    private float nextFire = 0.5F;
+    public float fireDelta = 0.1F;
+    private float nextFire = 0.0F;
     //private GameObject newProjectile;
     private float myTime = 0.0F;
     private GameObject MissleHolder;

@@ -36,9 +36,10 @@ public class HydraMissile : MonoBehaviour
             // Play explosion effect and sound
 
             // Take damage
-            Damage damage = collision.transform.GetComponent<Damage>();
+            Damage damage = collision.collider.transform.GetComponent<Damage>();
             damage.TakeDamage(20);
             Destroy(this.gameObject);
+            // Destroy(collision.collider.gameObject);
         }
         else if (collision.transform.tag == "Ground")
         {

@@ -28,10 +28,12 @@ public class Damage : MonoBehaviour
     void Die()
     {
         // Play explode animation and sound effect
+        Debug.Log("Die");
     }
 
     public void TakeDamage(int damage)
     {
+        Debug.Log("Take damage!");
         currentHealth -= damage;
         CheckHealth();
     }
